@@ -70,6 +70,7 @@ img {
   width: 50vw;
 }
 
+
 .major {
   font-family: "Major Mono Display", monospace;
   font-weight: 400;
@@ -112,8 +113,8 @@ img {
 		/* background-color: #333; */
 		border-radius: 50%;
 		opacity: 1;
-		animation: wheel 3s infinite;
-		-webkit-animation: wheel 3s infinite;
+		animation: wheel 2s infinite;
+		-webkit-animation: wheel 2s infinite;
 	}
 }
 

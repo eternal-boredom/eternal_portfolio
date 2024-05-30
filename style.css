@@ -1,0 +1,132 @@
+body, html {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  transition: background-color 0.5s; /* Smooth transition for background color change */
+}
+body {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.21' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+div {
+  padding: 0 40px;
+}
+
+a {
+  color: black;
+  transition: 1s;
+}
+
+a:hover {
+  color: grey;
+}
+
+#scrollable-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.snap {
+  scroll-snap-align: start;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 2rem; */
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+}
+
+/* .center img {
+  border-top: 1px dashed rgb(219, 219, 219);
+} */
+
+.left {
+  justify-content: left;
+  text-align: left;
+}
+
+/* .left img {
+  border-right: 1px dashed rgb(219, 219, 219);
+} */
+
+.right {
+  justify-content: right;
+  text-align: right;
+}
+
+/* .right img {
+  border-left: 1px dashed rgb(219, 219, 219);
+} */
+
+img {
+  width: 70%;
+}
+
+.major {
+  font-family: "Major Mono Display", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.authors {
+  position: relative;
+  bottom: 15px;
+  font-size: 13px;
+}
+
+.mouse {
+	width: 30px;
+	height: 60px;
+  padding: 0;
+  /* margin-top: 30px; */
+	border: 1px solid #333;
+	border-radius: 60px;
+	position: relative;
+  opacity: 0.5;
+  bottom: -30vh;
+	&::before {
+		content: '';
+		width: 12px;
+		height: 12px;
+    border: 2px solid #333;
+    color: transparent;
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		/* background-color: #333; */
+		border-radius: 50%;
+		opacity: 1;
+		animation: wheel 3s infinite;
+		-webkit-animation: wheel 3s infinite;
+	}
+}
+
+@keyframes wheel {
+	to {
+		opacity: 0;
+		top: 40px;
+	}
+}
+
+@-webkit-keyframes wheel {
+	to {
+		opacity: 0;
+		top: 40px;
+	}
+}
